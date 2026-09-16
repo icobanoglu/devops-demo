@@ -53,7 +53,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Build Docker image
-        run: docker build -t devops-demo
+        run: docker build -t devops-demo .
 
       - name: Run application inside container
         run: docker run devops-demo

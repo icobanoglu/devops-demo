@@ -6,25 +6,25 @@ on:
   
 permissions: 
   contents: read
-  pull_requests:write
+  pull_requests: write
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
     -name: Checkout code
-      uses: actions/checout@v4
+      uses: actions/checkout@v4
 
-    -name: Setup Python
+    - name: Setup Python
       uses: actions/setup-python@v5
       with:
         python-version: "3.12"
 
-      -name: Install pytest
-        run: pip install pytest
+    - name: Install pytest
+      run: pip install pytest
 
-      -name: Run tests
-        run: pytest
+    - name: Run tests
+      run: pytest
       
 
     

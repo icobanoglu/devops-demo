@@ -21,7 +21,7 @@ jobs:
           python-version: "3.12"
           
       - name: Install dependecies
-        run: pip install -r requriements.txt
+        run: pip install -r requirements.txt
 
       - name: Build
         run: python -m compileall
@@ -39,7 +39,7 @@ jobs:
         python-version: "3.12"
 
     - name: Install dependencies
-      run: pip install -r requriements.txt
+      run: pip install -r requirements.txt
 
     - name: Run tests
       run: pytest

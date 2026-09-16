@@ -45,7 +45,7 @@ jobs:
       run:  pytest --tb=short -q 2>&1 | tee test-output.txt
     
     - name: Publish test report
-      if: always{} 
+      if: always() 
       run: |
         echo "### Test Results" >> $GITHUB_STEP_SUMMARY
         cat test-output.txt >> $GITHUB_STEP_SUMMARY
